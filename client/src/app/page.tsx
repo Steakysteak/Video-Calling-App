@@ -1,7 +1,13 @@
-import Image from "next/image";
+"use client";
+import { SocketProvider } from "@/context/SocketProvider";
+import Lobby from "@/screens/Lobby";
 
 export default function Home() {
   return (
-    <><div>Home Page</div></>
+    <>
+      <SocketProvider>
+        <Lobby />
+      </SocketProvider>
+    </>
   );
 }
